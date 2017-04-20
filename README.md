@@ -4,5 +4,5 @@ Several methods for HOG MultiScale pedestrian detection, either in passed images
 
 <h6>Technologies used:</h6>
 - OpenCV <br>
-- Raspberry Pi (PiCamera)
+- Raspberry Pi (PiCamera) <br>
 - Python 2.7
