@@ -21,7 +21,6 @@ import time
 DEFAULT_MIN_IMAGE_WIDTH = 400
 DEFAULT_IMAGE_PADDING = (16, 16)
 SHOW_ORIGINAL_IMG = False
-DEBUG = False
 
 CALIBRATION_MODE_1 = (400, (3, 3), (16, 16), 1.01, 0.999)  # People very small size and close together
 CALIBRATION_MODE_2 = (400, (3, 3), (32, 32), 1.01, 0.8)  # People very small size
@@ -74,9 +73,6 @@ else:
     values = ((int(values[0]), int(values[0])), float(values[1]), float(values[2]))
     WIN_STRIDE, SCALE, OVERLAP_THRESHOLD = values
     MIN_IMAGE_WIDTH, PADDING = DEFAULT_MIN_IMAGE_WIDTH, DEFAULT_IMAGE_PADDING
-    
-if DEBUG:
-  assert 0 <= mode < 4
 
 image = imutils.resize(image, width=min(MIN_IMAGE_WIDTH, image.shape[1]))
 orig = image.copy()
